@@ -1,0 +1,20 @@
+""" Código anterior
+
+import subprocess
+import datetime
+
+agora = datetime.datetime.now()
+agora_str = agora.strftime('Dia %d/%m/%Y as %H:%M:%S')
+
+mensagem = f'Seu computador acabou de ser iniciado. {agora_str}'
+
+
+retorno = subprocess.run(f'curl -F text="{mensagem}"  -F parse_mode=html -F chat_id=-347658065 https://api.telegram.org/bot967922285:AAGpT_RZR3hhomdeZ2Uklj6nd4AljtaqufE/sendmessage', shell=True)
+
+#teste = subprocess.run(f'curl -F parse_mode=html -F chat_id=-347658065 https://api.telegram.org/bot967922285:AAGpT_RZR3hhomdeZ2Uklj6nd4AljtaqufE/getupdates', shell=True)
+
+print(retorno)
+
+print(agora_str)
+
+"""
