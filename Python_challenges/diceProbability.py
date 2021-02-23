@@ -33,4 +33,4 @@ def dices_pb_outcome(*args):
 
 
 
-dices_pb_outcome(2, 5)
+dices_pb_outcome(20)
