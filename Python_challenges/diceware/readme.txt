@@ -1,0 +1,1 @@
+Source of found words https://github.com/pythonprobr/palavras
