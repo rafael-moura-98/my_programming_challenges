@@ -1,4 +1,4 @@
-#[[[1, 2, 3], 2, [1, 3]], [1, 2, 3]]
+""" Encontra um valor e apresenta onde o valor se encontra em uma lista [[[1, 2, 3], 2, [1, 3]], [1, 2, 3]]"""
  
 def find_items(vlist: list, value: str) -> list:
     result = list()

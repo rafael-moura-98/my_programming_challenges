@@ -1,3 +1,5 @@
+""""Identifica se uma string é palindroma."""
+
 def indentify_palindrome(phrase: str) -> bool:
     phrase = phrase.strip()
     phrase = phrase.lower()

@@ -31,4 +31,6 @@ def throughTxtFile(txt_file: str) -> int:
 
     
     
-throughTxtFile("C:\\Workspace\\my_programming_challenges\\Python_challenges\\numberOfWords\\abcd.txt")
+throughTxtFile("a10_numberOfWords\\abcd.txt")
+
+#C:\Users\Rafael\Documents\Pasta pra apagar\Python_challenges\a10_numberOfWords\abcd.txt

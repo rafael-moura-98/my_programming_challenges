@@ -1,21 +1,27 @@
-import time
-from random import random, randint
+""" Um jogo basicamente impossível... Você precisa acertar o tempo apresentado como objetivo."""
 
-"""
-def input_time():
-    timer = random() + randint(2, 3) # Soma um float aleatório entre 0 e 1 e um inteiro entre 2 e 3.
-    timer_short = float(("%.2f" % round(timer, 2))) # Formata o numero para apenas 2 decimais.
-    return timer_short
-"""
+import time
+from random import randint
+
 
 delay = randint(2, 4)
-print(f'Your target is to wait {delay} seconds.')
+print(f'\nYour target is to wait {delay} seconds.')
 
-ready = input('\nType enter to start or stop: ')
-if ready == '':
-    print('GAME STARTED')
-    time_playing = time.perf_counter()
-    time.sleep(delay)
-    print(time_playing)
+input('\nType enter to start or stop: ')
+print('GAME STARTED')
+
+game_start_time = time.perf_counter() #start couting time running
+
+input('\nType enter to stop: ')
+game_duration_time = time.perf_counter() - game_start_time
+
+print(f"\nYour goal was {delay} and you hit {game_duration_time}.")
+
+if(delay > game_duration_time):
+    print("\nYou were too fast! ;-;")
+elif (delay < game_duration_time):
+    print("\nToo slow. Try again!")
+else:
+    print("\nPerfect timing. That's amazing!")
     
     

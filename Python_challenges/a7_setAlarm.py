@@ -1,22 +1,25 @@
+"Play a simple alert at the passed time."
+
 from datetime import datetime
-import time
+import winsound
 
-def setAlarm(wake_at, file_to_play, message):
-    now = datetime.now()
-
+def setAlarm(wake_at, message, file_to_play = "beep"):
     wake_at_time = wake_at.split(sep=":")
     
-    current_time = now.time()
-    print(wake_at_time[0])
-    print(wake_at_time[1])
-    print(current_time.hour)
-    print(current_time.minute)
-    
-    if int(wake_at_time[0]) == current_time.hour:
-        print(message)
-    
+    ringing = False
 
-setAlarm("9:26", 0, "Bom dia")
+    while(not ringing):
+        now = datetime.now()
+        current_time = now.time()
+
+        if int(wake_at_time[0]) == current_time.hour and int(wake_at_time[1]) == current_time.minute:
+            print(message)
+            if file_to_play == "beep":
+                winsound.Beep(500, 1000)
+            ringing = True
+
+    
+setAlarm("21:50", "Boa noite")
 
 
 

@@ -2,8 +2,17 @@ from random import randint
 
 
 def generate_pass(number_of_words):
-    with open("C:\\Workspace\\my_programming_challenges\\"+
-    "Python_challenges\\diceware\\portuguese_words.txt", "r", encoding="utf8") as words:
+    """
+    It return a random phrase to help create a strong password. The words come from a vast list of brazillian portuguese words.
+
+    Source of found words https://github.com/pythonprobr/palavras
+
+    Parameter
+    ---------
+
+    password: number of words to be returned
+    """
+    with open("a11_diceware\\portuguese_words.txt", "r", encoding="utf8") as words:
         
         content = words.readlines()
 

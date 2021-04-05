@@ -1,3 +1,5 @@
+# Fatoração de um número
+
 def prime_factors(number: int) -> list:
     divisor = 2
     keeper = 0
